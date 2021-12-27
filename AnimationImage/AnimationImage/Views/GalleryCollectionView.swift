@@ -18,10 +18,12 @@ class GalleryCollectionView: UICollectionView {
         
         delegate = self
         dataSource = self
+        
         register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: AnimalCollectionViewCell.reuseId)
         translatesAutoresizingMaskIntoConstraints = false
         layout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
         contentInset = UIEdgeInsets(top: 0, left: Constants.leftDistanceToView, bottom: 0, right: Constants.rightDistanceToView)
+        
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
     }
@@ -35,9 +37,7 @@ class GalleryCollectionView: UICollectionView {
     }
 }
 
-extension GalleryCollectionView: UICollectionViewDelegate {
-    
-}
+// MARK: - UICollection View Data Source
 
 extension GalleryCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,11 +46,14 @@ extension GalleryCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: AnimalCollectionViewCell.reuseId , for: indexPath) as! AnimalCollectionViewCell
+        
         cell.animalsImageView.image = animalsCells[indexPath.row].animalImage
         cell.nameLabel.text = animalsCells[indexPath.row].animalName
         return cell
     }
 }
+
+// MARK: - UICollection View Delegate Flow Layout
 
 extension GalleryCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

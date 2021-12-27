@@ -10,10 +10,11 @@ import UIKit
 class AnimalCollectionViewCell: UICollectionViewCell {
     
     static let reuseId = "AnimalCollectionViewCell"
-    
+
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont(name: "American Typewriter" , size: 20)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,6 +32,7 @@ class AnimalCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame )
         addSubview(animalsImageView)
         addSubview(nameLabel)
+        
         
 //        Image View Constraints
         animalsImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true

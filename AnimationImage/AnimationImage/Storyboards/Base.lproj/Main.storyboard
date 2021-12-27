@@ -34,12 +34,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGR-Fq-cJ5">
+                                <rect key="frame" x="115" y="717" width="184" height="65"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0DR-QY-Ly4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RGR-Fq-cJ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="3pY-QR-lYX"/>
+                            <constraint firstItem="RGR-Fq-cJ5" firstAttribute="top" secondItem="BGH-qs-vYl" secondAttribute="bottom" constant="515" id="Gb1-Z9-383"/>
                             <constraint firstItem="BGH-qs-vYl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Iks-Cc-Bms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RGR-Fq-cJ5" secondAttribute="bottom" constant="80" id="JSa-VA-Xam"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BGH-qs-vYl" secondAttribute="bottom" constant="660" id="ZFF-2E-aI2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGR-Fq-cJ5" secondAttribute="trailing" constant="115" id="hhE-fP-L54"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGH-qs-vYl" secondAttribute="trailing" constant="65" id="iYX-OR-rqe"/>
                             <constraint firstItem="BGH-qs-vYl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="wk2-lh-s4l"/>
                         </constraints>
